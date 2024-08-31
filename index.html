@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+  
+  <script defer src="github.js"></script>
+  <script defer src="ui.js"></script>
+  <script defer src="app.js"></script>
+
+  <title>GitHub Finder</title>
+</head>
+<body>
+  <nav class="blue">
+    <div class="nav-wrapper">
+      <div class="container">
+        <a href="#" class="brand-logo center">GitHub Finder</a>
+      </div>
+    </div>
+  </nav> 
+  
+  <section class="section">
+    <div class="container searchContainer">
+      <div class="row search">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <h1 class="center">Search GitHub Users</h1>
+              <p>Enter a username to fetch a user profile and repos</p>
+              <div class="input-field">
+                <input type="text" id="searchUser" placeholder="Enter GitHub Username..." required>
+                <label for="searchUser" class="label-icon">
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>  
+      </div>
+      <div id="apiCallCount" class="row hide">
+        <div class="col s12 m4 l6">
+            <div class="card-panel light-blue darken-1 white-text">
+              <div>Number of letter typed: <span id='show-api-call-count'></span></div>
+            </div>          
+          </div>
+        <div class="col s12 m8 l6">
+          <div class="card-panel blue-grey darken-1 white-text">
+	          	<div>Number of times API got called: <span id="debounce-count"></span></div>           
+          </div>
+        </div>          
+      </div>      
+      <div id="profile"></div>
+    </div>
+  </section>
+  
+  <footer class="section grey darken-2 white-text center">
+    <div class="container">
+      GitHub Finder &copy;
+    </div>
+  </footer>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="materialize.min.js"></script>
+
+</body>
+</html>
